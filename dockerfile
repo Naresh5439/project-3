@@ -41,7 +41,7 @@ pipeline {
                     docker rm ecr-nginx || true
 
                     echo "Running Docker container..."
-                    docker run -d -p 8080:80 --name ecr-nginx $ECR_REGISTRY/$ECR_REPO:$IMAGE_TAG
+                    docker run -d -p 8081:80 --name ecr-nginx $ECR_REGISTRY/$ECR_REPO:$IMAGE_TAG
                 '''
             }
         }
