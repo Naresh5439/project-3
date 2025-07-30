@@ -1,0 +1,8 @@
+# Use official Apache image as base
+FROM httpd:2.4
+
+# Copy custom HTML files to Apache web root
+COPY ./public-html/ /usr/local/apache2/htdocs/
+
+# Expose port 80 (HTTP)
+EXPOSE 80
